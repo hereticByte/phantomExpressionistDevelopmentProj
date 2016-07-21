@@ -1,4 +1,4 @@
-package tryOut.packageLevel02.packageLevel03;
+package tryThisOut.packageLevel02.packageLevel03;
 
 
 
@@ -17,6 +17,10 @@ class DeeplyRootedClass
 
     } // public function NotUsedButIncludedClass( fantastisch : Int, toll : Int, ?optional )
 
+    public function useMeWithTheFullPath() : Void
+    {
+        trace( "useMeWithTheFullPath() was launched..." );
+    } // public function useMeWithTheFullPath()
 
     public function deeplyRootedMethod()
     {

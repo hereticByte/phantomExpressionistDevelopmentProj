@@ -1,11 +1,14 @@
 package ;
 
 
-import tryOut.packageLevel02.packageLevel03.DeeplyRootedClass;
+import tryThisOut.packageLevel02.packageLevel03.DeeplyRootedClass;
 import haxe.macro.Expr;
-import tryOut.TryOut;
-import expresso.ExpressionParser;
-// import tryOut.packageLevel02.NotUsedButIncludedClass;
+import tryThisOut.AnotherTryOutClass;
+
+import AnotherClassPathClass;
+import tryThisOut.packageLevel02.NotUsedButIncludedClass;
+import tryThisOut.TryOut;
+// import tryThisOut.packageLevel02.NotUsedButIncludedClass;
 
 
 class Main
@@ -16,10 +19,8 @@ class Main
 var blueDot = NotUsedButIncludedClass BlueDot( { "src/Main.hx", [ Landmark.functionBody ], "main", ScopeKind.end } )
 */
 
-//        var tollTrace : Expr =
-        macro {
-            trace( "Toll, das erste Macro ist gesetzt."  );
-    };
+
+
 
         /*
         RedDot
@@ -33,6 +34,7 @@ var blueDot = NotUsedButIncludedClass BlueDot( { "src/Main.hx", [ Landmark.funct
         */
         var toll : Int = 4;
 
+        var anotherClassPathClass : AnotherClassPathClass = new AnotherClassPathClass();
 
         /*
         Later on it's like the following:
@@ -96,6 +98,13 @@ collector.blueThread.addDot( redDot );
 
 // Todo: Void function
 
+        {
+            trace( "Block: Line 100" );
+            trace( "Block: Line 101" );
+            trace( "Block: Line 102" );
+        }
+
+
 
 
         /*
@@ -106,6 +115,16 @@ collector.blueThread.addDot( redDot );
                             return ( toll < 33 );
                         }
 
+        */
+        /*
+        if( toll == 12 )
+        {
+            trace( "Something." );
+            if( toll > 3 )
+                trace( "Something else." )
+        }
+        else
+            trace( "Great!" );
         */
         if( toll < 33 )
         {
@@ -184,8 +203,10 @@ collector.blueThread.addDot( redDot );
 
         ganzToll = fantastisch > toll ? Std.int( ganzToll / 4 ) : ganzToll * 5;
 
-        var tryOut : TryOut = new TryOut( 3, 2.5, "Drei" );
+        var tryThisOut : TryOut = new TryOut( 3, 2.5, "Drei" );
 
+        var secondTryOut = new TryOut( 32, 22.5, "Vier" );
+        var thirdTryOut = new tryThisOut.TryOut( 32, 22.5, "Vier" );
 /*        testPurposeMethod();
         testPurposeMethod();
         testPurposeMethod();*/
@@ -208,6 +229,14 @@ collector.blueThread.addDot( redDot );
             trace( i );
         } //for( i in 0...10 )
 
+        var arr : Array<String> = [ "Toll!!!", "Fantastisch!", "Großartig!!!" ];
+
+        for( item in arr )
+        {
+            trace( item );
+        } // for( item in arr )
+
+
         try
         {
             trace( "Try-Block" );
@@ -216,7 +245,6 @@ collector.blueThread.addDot( redDot );
 
         catch( e : String )
         {
-
             trace( "Catch-Block" );
             trace( "Error Message:" );
             trace( e );
@@ -252,6 +280,7 @@ collector.blueThread.addDot( redDot );
         */
 
 
+
         TryOut.executeVoidFn( TryOut.tollFn );
 
         trace( "RegEx-Test" );
@@ -275,7 +304,7 @@ collector.blueThread.addDot( redDot );
 
         trace( deeplyRooted.fantastisch );
 
-        var deeplyRootedPlusOptional : DeeplyRootedClass = new DeeplyRootedClass( 11, 43, true );
+        var deeplyRootedPlusOptional : tryThisOut.packageLevel02.packageLevel03.DeeplyRootedClass = new DeeplyRootedClass( 11, 43, true );
 
         function withinMainFunc( int01 : Int, int02 : Int ) : Int
         {
@@ -286,7 +315,31 @@ collector.blueThread.addDot( redDot );
 
         "<endStatement>";
 
+        // Todo uncomment the line below if you found a solution for the issue...
+        tryThisOut.packageLevel02.packageLevel03.DeeplyRootedClass.useMeWithTheFullPath();
 
+
+        deeplyRootedPlusOptional.fantastisch = 3;
+        trace( deeplyRootedPlusOptional );
+
+
+        var anAssignedFunction = function ( x : Int, y : Int ) : Int
+                                    {
+                                        return x * y;
+                                    } // var anAssignedFunction = function ( x : Int, y : Int ) : Int
+
+        var great : Int = anAssignedFunction( 13, 12 );
+
+        var arrayY : Array<String> = new Array<String>();
+        arrayY = [ "Nice!", "Quite good." ];
+
+        arrayY [ 0 ] = "Still quite good.";
+
+        var arrayX : Array<String> = [ "Great!", "Fantastic!", "Cool!" ];
+
+        var stringX : String = arrayX [ 1 ];
+
+        var newVar : String;
     } // public static function main()
 
 

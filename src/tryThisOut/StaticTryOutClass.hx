@@ -1,4 +1,4 @@
-package tryOut;
+package tryThisOut;
 class StaticTryOutClass
 {
     public function traceSomething()
