@@ -1,0 +1,7 @@
+-cp secondSrc
+-cp src
+
+
+-main Main
+
+-cpp _no_macro_cpp

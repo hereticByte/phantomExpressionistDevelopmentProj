@@ -1,9 +1,9 @@
-package tryOut.packageLevel02;
+package tryThisOut.packageLevel02;
 
 class NotUsedButIncludedClass
 
 {
-    // includ tryOut.packageLevel02.NotUsedButIncludedClass
+    // includ tryThisOut.packageLevel02.NotUsedButIncludedClass
     public var toll : Int;
 
     public function new()

@@ -1,4 +1,4 @@
-package tryOut;
+package tryThisOut;
 class AnotherTryOutClass
 {
 
@@ -9,5 +9,10 @@ class AnotherTryOutClass
     {
         toll = "Toll!!!";
         fantastisch = 5;
+    }
+
+    public function alsoTryMeWithFullPath()
+    {
+        trace( "alsoTryMeWithFullPath() was launched..." );
     }
 }

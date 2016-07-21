@@ -1,4 +1,4 @@
-package tryOut;
+package tryThisOut;
 class TryOut
 {
     public var int : Int;
